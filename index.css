@@ -1,0 +1,140 @@
+*,*::before,*::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: black;
+}
+.container
+{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.comics
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin:0 auto;
+    grid-gap:30px;
+}
+.comics-item{
+    background-color: grey;
+    border-radius: 10px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+}
+.comics-item:hover{
+    box-shadow: 1px 1px 10px 1px white;
+}
+.comics-title{
+    text-align: center;
+    padding: 15px 0;
+    font-size: 22px;
+    font-weight: 900;
+}
+.comics-img{
+    width:100%;
+    height: 250px;
+    object-fit: contain;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+.buttons-page
+{
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.button-page
+{
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 900;
+    width: 120px;
+    height: 40px;
+    border: 2px solid white;
+    transition: 0.5s;
+}
+.button-page:hover{
+    transform: scale(1.1);
+}
+.button-page_active
+{
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+}
+.modal
+{
+    position: fixed;
+    background-color: wheat;
+    width: 95%;
+    height: 95vh;
+    top:50%;
+    left:50%;
+    border-radius: 20px;
+    transform: translate(-50%,-50%) scale(0);
+    transition: 1s;
+    overflow: auto;
+    padding: 20px 10px;
+}
+.modal-char
+{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+.modal-close
+{
+    position: absolute;
+    font-weight: 900;
+    font-size: 20px;
+    top:10px;
+    right:10px;
+    border-radius: 50%;
+    padding: 5px 10px;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 100;
+}
+.modal-close:hover
+{
+    background-color: black;
+    color: wheat;
+    border: 2px solid white;
+}
+.modal-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+.modal-img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.modal-title{}
